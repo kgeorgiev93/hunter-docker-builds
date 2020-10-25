@@ -1,0 +1,21 @@
+version: "3.4"
+services:
+    ros-melodic-dev:
+        build:
+            context: .
+            dockerfile: Dockerfile
+            args:
+                - IMAGE=ros:melodic
+        image: ros:melodic-dev
+        extra_hosts:
+            - "ubuntu:127.0.0.1"
+
+    ros-noetic-dev:
+        build:
+            context: .
+            dockerfile: Dockerfile
+            args:
+                - IMAGE=ros:noetic
+        image: ros:noetic-dev
+        extra_hosts:
+            - "ubuntu:127.0.0.1"
